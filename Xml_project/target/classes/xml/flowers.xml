@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="flower.xsl"?>
+
+<flowers xmlns="flowers"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="flowers flower.xsd">
+<flower flowerNo="1">
+    <name>rose</name>
+    <soil>podzolic</soil>
+    <origin>america</origin>
+    <visual_parameters>
+        <color_stem>green</color_stem>
+        <color_leaf>green_yellow</color_leaf>
+        <flower_average_size>2.5</flower_average_size>
+    </visual_parameters>
+    <growing_tips>
+        <temperature>18</temperature>
+        <lighting>true</lighting>
+        <watering>150</watering>
+    </growing_tips>
+    <multiplying>by seeds</multiplying>
+</flower>
+    <flower flowerNo="2">
+        <name>lilies</name>
+        <soil>turf podzolic</soil>
+        <origin>sweden</origin>
+        <visual_parameters>
+            <color_stem>green</color_stem>
+            <color_leaf>orange_yellow</color_leaf>
+            <flower_average_size>3.2</flower_average_size>
+        </visual_parameters>
+        <growing_tips>
+            <temperature>21</temperature>
+            <lighting>true</lighting>
+            <watering>200</watering>
+        </growing_tips>
+        <multiplying>by cuttings</multiplying>
+    </flower>
+</flowers>

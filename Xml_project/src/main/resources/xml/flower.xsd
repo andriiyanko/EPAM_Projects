@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="flowers"
+           xmlns="flowers"
+           elementFormDefault="qualified">
+
+    <xs:element name = "flowers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "flower" type = "flowerType" minOccurs = "1"
+                            maxOccurs = "unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="flowerType">
+        <xs:sequence>
+            <xs:element name = "name" type = "xs:string"/>
+
+            <xs:element name = "soil">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="podzolic"/>
+                        <xs:enumeration value="turf podzolic"/>
+                        <xs:enumeration value="dirt"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+
+            <xs:element name = "origin" type = "xs:string"/>
+            <xs:element name = 'visual_parameters'>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name= "color_stem" type= "xs:string"/>
+                        <xs:element name= "color_leaf" type= "xs:string"/>
+                        <xs:element name = "flower_average_size">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name = "growing_tips">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name= "temperature">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="5.0"/>
+                                    <xs:maxInclusive value="25.0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name= "lighting" type= "xs:boolean"/>
+                        <xs:element name="watering">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="100.0"/>
+                                    <xs:maxInclusive value="400.0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name= "multiplying" type= "xs:string"/>
+        </xs:sequence>
+        <xs:attribute name= "flowerNo" type= "xs:integer"/>
+    </xs:complexType>
+</xs:schema>
