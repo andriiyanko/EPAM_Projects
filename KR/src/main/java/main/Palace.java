@@ -9,10 +9,8 @@ public class Palace extends Dwelliing {
    private int rent;
    private String palaceName;
 
-
-
     private List<Location> locations = new ArrayList<Location>();
-    private List<Palace> palaces ;
+    private List<Palace> palaces = new ArrayList<Palace>() ;
 
     public List<Location> getLocations() {
         return locations;
@@ -62,7 +60,7 @@ public class Palace extends Dwelliing {
             System.out.print("Enter palace's name: ");
             sc.nextLine();
             nameOfPalace = sc.nextLine();
-            System.out.println("Enter rent:");
+            System.out.print("Enter rent:");
             rent = sc.nextInt();
 
 
@@ -109,4 +107,5 @@ public class Palace extends Dwelliing {
         }
         return findPalaces;
     }
+
 }

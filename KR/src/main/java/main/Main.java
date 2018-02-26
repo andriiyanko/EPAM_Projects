@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Palace palace = new Palace();
         palace.generatePlaces();
-        palace.getLocations();
+        palace.generateLocations();
         palace.findPalace(300, 1000);
 
     }
