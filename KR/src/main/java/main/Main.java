@@ -6,10 +6,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        Flat flat = new Flat();
-        flat.setPrice(3);
-        flat.setRent(2);
-        flat.displayInfo();
+        Palace palace = new Palace();
+        palace.generatePlaces();
+        palace.getLocations();
+        palace.findPalace(300, 1000);
 
     }
 }

@@ -97,8 +97,16 @@ public class Palace extends Dwelliing {
         }
     }
         public List<Palace> findPalace(int rent, int distance){
-            List<Palace> palaces = new ArrayList<Palace>();
+            List<Palace> findPalaces = new ArrayList<Palace>();
+            for (int i = 0; i < palaces.size(); i++) {
+                if (palaces.get(i).getRent() < rent){
+                    for (Location location : palaces.get(i).getLocations()){
+                        if (location.getDistance() < distance){
+                            findPalaces.add(palaces.get(i));
+                        }
+                    }
+            }
         }
-
+        return findPalaces;
     }
 }
